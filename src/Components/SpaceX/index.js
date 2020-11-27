@@ -1,6 +1,7 @@
 // import React, { useState, useEffect } from "react";
 // import "./Space-X.scss";
-// export default function X() {
+
+// export default function SpaceX() {
 //   // ERROR HANDLER => LOADING HANDLER => SPACE-X LAUNCHES
 //   const [error, setError] = useState(null);
 //   const [isLoaded, setIsLoaded] = useState(false);
