@@ -8,7 +8,9 @@ export default function API() {
 
   // FUNCTIONAL COMPONENTDIDMOUNT USING USEEFFECT HOOK
   useEffect(() => {
-    fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+    fetch(
+      "https://api.nasa.gov/planetary/apod?api_key=Y423QMOn9VCVOVmxkHg1ZTg8x8S3kszz7UHwXYvd"
+    )
       .then((res) => res.json())
       .then(
         (result) => {
@@ -34,16 +36,10 @@ export default function API() {
   } else {
     return (
       <div>
-        {/* {photos.map((photo) => ( */}
-        {/* <p key={photo.id}> */}
-        <p>I should add some props so I can make this easy on myself</p>
-
-        {/* <img src="" alt="nasa-photo"/> */}
-        {/* <p>{photo.title}</p> */}
-        {/* <p>{photo.copyright}</p> */}
-        {/* <p>{photo.explanation}</p> */}
-        {/* </p> */}
-        {/* ))} */}
+        <img src={myObj.hdurl} alt='jpg' />
+        <p>{myObj.title}</p>
+        <p>{myObj.copyright}</p>
+        <p>{myObj.explanation}</p>
       </div>
     );
   }
