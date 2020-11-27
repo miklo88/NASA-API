@@ -24,9 +24,8 @@ export default function API() {
         }
       );
   }, []);
-  //   console.log(photos);
-  const myObj = photos;
-  console.log(myObj);
+  //   CHECKING OUT MY OBJECT
+  console.log(photos);
 
   // RENDERING THE COMPONENT
   if (error) {
@@ -38,10 +37,10 @@ export default function API() {
   } else {
     return (
       <div className='payload-container'>
-        <img src={myObj.hdurl} alt='jpg' />
-        <p>{myObj.title}</p>
-        <p>{myObj.copyright}</p>
-        <p>{myObj.explanation}</p>
+        <img src={photos.hdurl} alt='jpg' />
+        <p>{photos.title}</p>
+        <p>{photos.copyright}</p>
+        <p>{photos.explanation}</p>
       </div>
     );
   }
