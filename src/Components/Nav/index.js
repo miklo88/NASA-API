@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-// import NASA from "../SpaceX/Xapi";
-
+import "./Nav.scss";
 export default function Nav() {
   return (
     <>
@@ -13,9 +11,9 @@ export default function Nav() {
             <Link to='/'>Home</Link>
           </li>
           {/* SPACE X API */}
-          <li>
+          {/* <li>
             <Link to='/spacex'>Space-X</Link>
-          </li>
+          </li> */}
           {/* NASA API */}
           <li>
             <Link to='/nasa'>NASA</Link>
