@@ -26,7 +26,7 @@ function NASA() {
       );
   }, []);
   //   CHECKING OUT MY OBJECT
-  console.log(photos);
+  // console.log(photos);
 
   // RENDERING THE COMPONENT
   if (error) {

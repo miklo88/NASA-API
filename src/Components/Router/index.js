@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Landing from "../Landing";
-// import SpaceX from "../SpaceX";
+import SpaceX from "../SpaceX";
 import NASA from "../NASA";
 
 function Router() {
@@ -11,7 +11,7 @@ function Router() {
         {/* HOME */}
         <Route exact path='/' component={Landing} />
         {/* SPACE X API */}
-        {/* <Route exact path='/spacex' component={SpaceX} /> */}
+        <Route exact path='/spacex' component={SpaceX} />
         {/* NASA API */}
         <Route exact path='/nasa' component={NASA} />
       </Switch>
