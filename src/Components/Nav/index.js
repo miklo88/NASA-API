@@ -6,11 +6,17 @@ export default function Nav() {
   return (
     <nav className='navigation-container'>
       {/* HOME BUTTON */}
-      <Link to='/'>Home</Link>
+      <Link className='link' to='/'>
+        Home
+      </Link>
       {/* SPACE X API */}
-      <Link to='/spacex'>Space-X</Link>
+      <Link className='link' to='/spacex'>
+        Space-X
+      </Link>
       {/* NASA API */}
-      <Link to='/nasa'>NASA</Link>
+      <Link className='link' to='/nasa'>
+        NASA
+      </Link>
     </nav>
   );
 }
