@@ -19,12 +19,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  h1 {
+    font-size: 1.5rem;
+    padding: 20px 0px;
+  }
   // NASA IMAGE
   img {
     height: auto;
     width: 100%;
     min-width: 200px;
-    padding: 25px;
+    padding: 0px 20px;
   }
   // NASA TITLE, DATE, COPYRIGHT, EXPLANATION
   p {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Landing from "../Landing";
-import SpaceX from "../SpaceX";
+import SpaceX from "../SpaceX/index";
 import NASA from "../NASA";
 
 function Router() {

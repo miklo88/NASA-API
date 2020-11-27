@@ -38,11 +38,11 @@ function NASA() {
   } else {
     return (
       <div className='payload-container'>
+        <h1>NASA's Astronomy Picture of the Day</h1>
         <img src={photos.hdurl} alt='jpg' />
         <p>Title: {photos.title}</p>
-        <p>Date: {photos.date}</p>
-        <p>By: {photos.copyright}</p>
-        <p>What is it?: {photos.explanation}</p>
+        <p>Copyright Credit: {photos.copyright}</p>
+        <p>Explanation: {photos.explanation}</p>
       </div>
     );
   }
