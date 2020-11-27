@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Nasa.scss";
 
-export default function NASA() {
+function NASA() {
   // ERROR HANDLER => LOADING HANDLER => NASA PHOTOS
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -47,3 +47,4 @@ export default function NASA() {
     );
   }
 }
+export default NASA;

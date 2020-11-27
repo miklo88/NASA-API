@@ -4,7 +4,7 @@ import Landing from "../Landing";
 // import X from "../SpaceX";
 import NASA from "../NASA";
 
-export default function Router() {
+function Router() {
   return (
     <>
       <Switch>
@@ -18,3 +18,4 @@ export default function Router() {
     </>
   );
 }
+export default Router;
