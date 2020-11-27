@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import "./Nasa.scss";
 
-export default function API() {
+export default function NASA() {
   // ERROR HANDLER => LOADING HANDLER => NASA PHOTOS
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -38,9 +39,10 @@ export default function API() {
     return (
       <div className='payload-container'>
         <img src={photos.hdurl} alt='jpg' />
-        <p>{photos.title}</p>
-        <p>{photos.copyright}</p>
-        <p>{photos.explanation}</p>
+        <p>Title: {photos.title}</p>
+        <p>Date: {photos.date}</p>
+        <p>By: {photos.copyright}</p>
+        <p>What is it?: {photos.explanation}</p>
       </div>
     );
   }

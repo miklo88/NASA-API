@@ -1,11 +1,12 @@
-import API from "./Components/Utils/API";
+import Nav from "./Components/Nav";
+import Router from "./Components/Router";
 import "./App.scss";
 // HOME COMPONENT
 function App() {
   return (
     <div className='App'>
-      <p>HOLA</p>
-      <API />
+      <Nav />
+      <Router />
     </div>
   );
 }
