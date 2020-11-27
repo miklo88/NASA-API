@@ -1,5 +1,5 @@
-import API from "./components/utils/api";
-import "./App.css";
+import API from "./Components/Utils/API";
+import "./App.scss";
 // HOME COMPONENT
 function App() {
   return (

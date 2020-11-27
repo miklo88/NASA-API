@@ -30,12 +30,14 @@ export default function API() {
 
   // RENDERING THE COMPONENT
   if (error) {
-    return <div>Error Will Robinson: {error.message}</div>;
+    return (
+      <div className='error-message'>Error Will Robinson: {error.message}</div>
+    );
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
+    return <div className='loading-message'>Loading...</div>;
   } else {
     return (
-      <div>
+      <div className='payload-container'>
         <img src={myObj.hdurl} alt='jpg' />
         <p>{myObj.title}</p>
         <p>{myObj.copyright}</p>
