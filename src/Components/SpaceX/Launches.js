@@ -36,10 +36,10 @@ export default function Launches() {
   } else {
     return (
       <div className='payload-container'>
-        <img className='patch' src={launches.links.patch.large} alt='png' />
+        {/* <img className='patch' src={launches.links.patch.large} alt='png' /> */}
         <h1>Name of Launch: {launches.name}</h1>
         <div className='image-container'>
-          <img
+          {/* <img
             className='launch-image'
             src={launches.links.flickr.original[0]}
             alt='jpg'
@@ -48,7 +48,7 @@ export default function Launches() {
             className='launch-image'
             src={launches.links.flickr.original[1]}
             alt='jpg'
-          />
+          /> */}
         </div>
 
         <p>Local Date and Time of launch: {launches.date_local}</p>
