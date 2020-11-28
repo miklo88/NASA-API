@@ -1,0 +1,38 @@
+.error-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.loading-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.payload-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 1.5rem;
+    padding: 20px 0px;
+  }
+  // NASA IMAGE
+  img {
+    height: auto;
+    width: 100%;
+    min-width: 200px;
+    padding: 0px 20px;
+  }
+  // NASA TITLE, DATE, COPYRIGHT, EXPLANATION
+  p {
+    max-width: 800px;
+    padding: 10px 5px;
+  }
+}

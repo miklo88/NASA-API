@@ -1,0 +1,24 @@
+//LAUNCHES COMPONENT
+.payload-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .patch {
+    max-width: 100px;
+    height: auto;
+    width: 100%;
+    padding: 20px 0px;
+  }
+  .image-container {
+    display: flex;
+    flex-direction: row;
+
+    .launch-image {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      padding: 10px 10px;
+    }
+  }
+}
