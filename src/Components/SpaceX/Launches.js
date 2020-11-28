@@ -38,16 +38,19 @@ export default function Launches() {
       <div className='payload-container'>
         <img className='patch' src={launches.links.patch.large} alt='png' />
         <h1>Name of Launch: {launches.name}</h1>
-        <img
-          className='launch-image'
-          src={launches.links.flickr.original[0]}
-          alt='jpg'
-        />
-        <img
-          className='launch-image'
-          src={launches.links.flickr.original[1]}
-          alt='jpg'
-        />
+        <div className='image-container'>
+          <img
+            className='launch-image'
+            src={launches.links.flickr.original[0]}
+            alt='jpg'
+          />
+          <img
+            className='launch-image'
+            src={launches.links.flickr.original[1]}
+            alt='jpg'
+          />
+        </div>
+
         <p>Local Date and Time of launch: {launches.date_local}</p>
         <p>Flight Number: {launches.flight_number}</p>
         <p>Mission objective: {launches.details}</p>

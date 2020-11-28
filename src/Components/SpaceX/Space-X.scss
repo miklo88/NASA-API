@@ -10,10 +10,15 @@
     width: 100%;
     padding: 20px 0px;
   }
-  .launch-image {
-    max-width: 800px;
-    width: 100%;
-    height: auto;
-    padding: 10px 0px;
+  .image-container {
+    display: flex;
+    flex-direction: row;
+
+    .launch-image {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      padding: 10px 10px;
+    }
   }
 }

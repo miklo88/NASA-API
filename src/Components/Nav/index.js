@@ -5,17 +5,13 @@ import "./Nav.scss";
 export default function Nav() {
   return (
     <nav className='navigation-container'>
-      {/* HOME BUTTON */}
-      <Link className='link' to='/'>
-        Home
+      {/* NASA API */}
+      <Link className='link' to='/nasa'>
+        NASA
       </Link>
       {/* SPACE X API */}
       <Link className='link' to='/spacex'>
         Space-X
-      </Link>
-      {/* NASA API */}
-      <Link className='link' to='/nasa'>
-        NASA
       </Link>
     </nav>
   );
