@@ -6,7 +6,7 @@ export default function Nav() {
   return (
     <nav className='navigation-container'>
       {/* NASA API */}
-      <Link className='link' to='/nasa'>
+      <Link className='link' to='/'>
         NASA
       </Link>
       {/* SPACE X API */}
