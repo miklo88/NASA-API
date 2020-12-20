@@ -24,9 +24,29 @@ export default function Launches() {
         }
       );
   }, []);
-  //   CHECKING OUT MY OBJECT
-  console.log(launches);
-
+  // console.log(launches);
+  // RETURNING BOOLEANS FROM THE API LAUNCHES.CORES IN OBJ
+  let gridfins = launches.cores[0].gridfins ? (
+    <li>Gridfins: Yes</li>
+  ) : (
+    <li>Gridfins: No</li>
+  );
+  let landingAttempt = launches.cores[0].landing_attempt ? (
+    <li>Landing Attempt: Yes</li>
+  ) : (
+    <li>Landing Attempt: No</li>
+  );
+  let landingSuccess = launches.cores[0].landing_success ? (
+    <li>Landing Success: Yes</li>
+  ) : (
+    <li>Landing Success: No</li>
+  );
+  let reused = launches.cores[0].reused ? (
+    <li>Reused: Yes</li>
+  ) : (
+    <li>Reused: No</li>
+  );
+  // RETURNING BOOLEANS FROM THE API LAUNCHES.CORES IN OBJ
   // RENDERING THE COMPONENT
   if (error) {
     return (
@@ -70,25 +90,20 @@ export default function Launches() {
             Mission objective: <br />
             {launches.details}
           </p>
+          {/* THIS ERRORS OUT WHEN YOU LEAVE THE COMPONENT AND THEN RETURN TO IT */}
           <ul>
-            {launches.cores.map((core) => {
-              return (
-                <li key={core.id}>
-                  <p>
-                    Cores: <br />
-                    Flight No: {core.flight} <br />
-                    Gridfins: {core.gridfins} <br />
-                    Landing Attempt: {core.landing_attempt} <br />
-                    Landing Success: {core.landing_success} <br />
-                    Landing Type: {core.landing_type} <br />
-                    Reused: {core.reused} <br />
-                  </p>
-                </li>
-              );
-            })}
+            {/* {console.log(launches.cores)} */}
+            Cores: <br />
+            <li>Flight No: {launches.cores[0].flight}</li>
+            <li>{gridfins}</li>
+            <li>{landingAttempt}</li>
+            {/* {launches.cores[0].landing_success} ? <li>Landing Success: True</li>
+            : <li>Landing Success: False</li> */}
+            <li>{landingSuccess}</li>
+            <li>Landing Type: {launches.cores[0].landing_type}</li>
+            <li>{reused}</li>
           </ul>
         </div>
-        {/* <button src={launches.links.webcast}>Youtube link</button> */}
       </div>
     );
   }
