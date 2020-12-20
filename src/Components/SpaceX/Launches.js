@@ -89,8 +89,6 @@ export default function Launches() {
             <li>Flight No: {launches.cores[0].flight}</li>
             <li>{gridfins}</li>
             <li>{landingAttempt}</li>
-            {/* {launches.cores[0].landing_success} ? <li>Landing Success: True</li>
-            : <li>Landing Success: False</li> */}
             <li>{landingSuccess}</li>
             <li>Landing Type: {launches.cores[0].landing_type}</li>
             <li>{reused}</li>
