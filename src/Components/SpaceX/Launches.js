@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Space-X.scss";
-import spaceSuit from "../Imgs/space_suit.jpg";
 
 export default function Launches() {
   // ERROR HANDLER => LOADING HANDLER => SPACE-X LAUNCHES
@@ -24,8 +23,29 @@ export default function Launches() {
         }
       );
   }, []);
-  //   CHECKING OUT MY OBJECT
-  //   console.log(launches);
+  // console.log(launches);
+  // RETURNING BOOLEANS FROM THE API LAUNCHES.CORES IN OBJ
+  let gridfins = launches.cores[0].gridfins ? (
+    <li>Gridfins: Yes</li>
+  ) : (
+    <li>Gridfins: No</li>
+  );
+  let landingAttempt = launches.cores[0].landing_attempt ? (
+    <li>Landing Attempt: Yes</li>
+  ) : (
+    <li>Landing Attempt: No</li>
+  );
+  let landingSuccess = launches.cores[0].landing_success ? (
+    <li>Landing Success: Yes</li>
+  ) : (
+    <li>Landing Success: No</li>
+  );
+  let reused = launches.cores[0].reused ? (
+    <li>Reused: Yes</li>
+  ) : (
+    <li>Reused: No</li>
+  );
+  // RETURNING BOOLEANS FROM THE API LAUNCHES.CORES IN OBJ
 
   // RENDERING THE COMPONENT
   if (error) {
@@ -45,15 +65,7 @@ export default function Launches() {
         <div className='image-container'>
           <img
             className='launch-image'
-            // src={launches.links.flickr.original}
-            src={spaceSuit}
-            alt='jpg'
-          />
-          {console.log(launches.links.flickr.original[0])}
-          <img
-            className='launch-image'
-            // src={launches.links.flickr.original}
-            src={spaceSuit}
+            src={launches.links.patch.small}
             alt='jpg'
           />
         </div>
@@ -70,8 +82,20 @@ export default function Launches() {
             Mission objective: <br />
             {launches.details}
           </p>
+          {/* THIS ERRORS OUT WHEN YOU LEAVE THE COMPONENT AND THEN RETURN TO IT */}
+          <ul>
+            {/* {console.log(launches.cores)} */}
+            Cores: <br />
+            <li>Flight No: {launches.cores[0].flight}</li>
+            <li>{gridfins}</li>
+            <li>{landingAttempt}</li>
+            {/* {launches.cores[0].landing_success} ? <li>Landing Success: True</li>
+            : <li>Landing Success: False</li> */}
+            <li>{landingSuccess}</li>
+            <li>Landing Type: {launches.cores[0].landing_type}</li>
+            <li>{reused}</li>
+          </ul>
         </div>
-        {/* <button src={launches.links.webcast}>Youtube link</button> */}
       </div>
     );
   }
