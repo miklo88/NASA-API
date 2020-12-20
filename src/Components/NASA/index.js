@@ -25,9 +25,6 @@ function NASA() {
         }
       );
   }, []);
-  //   CHECKING OUT MY OBJECT
-  // console.log(photos);
-
   // RENDERING THE COMPONENT
   if (error) {
     return (
@@ -40,9 +37,20 @@ function NASA() {
       <div className='payload-container'>
         <h1>NASA's Astronomy Picture of the Day</h1>
         <img src={photos.hdurl} alt='jpg' />
-        <p>Title: {photos.title}</p>
-        <p>Copyright Credit: {photos.copyright}</p>
-        <p>Explanation: {photos.explanation}</p>
+        <div className='content'>
+          <p>
+            Title: <br />
+            {photos.title}
+          </p>
+          <p>
+            Copyright Credit: <br />
+            {photos.copyright}
+          </p>
+          <p>
+            Explanation: <br />
+            {photos.explanation}
+          </p>
+        </div>
       </div>
     );
   }
