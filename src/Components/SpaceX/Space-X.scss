@@ -10,16 +10,11 @@
     width: 100%;
     padding: 20px 0px;
   }
-  .image-container {
-    display: flex;
-    flex-direction: row;
-
-    .launch-image {
-      max-width: 400px;
-      width: 100%;
-      height: auto;
-      padding: 10px 10px;
-    }
+  .launch-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    padding: 10px 10px;
   }
   .spacex-content {
     display: flex;
@@ -28,10 +23,6 @@
     align-items: flex-start;
     max-width: 800px;
     p {
-      text-align: left;
-      padding: 10px 10px;
-    }
-    ul {
       text-align: left;
       padding: 10px 10px;
     }

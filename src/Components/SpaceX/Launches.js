@@ -23,29 +23,8 @@ export default function Launches() {
         }
       );
   }, []);
-  // console.log(launches);
-  // RETURNING BOOLEANS FROM THE API LAUNCHES.CORES IN OBJ
-  let gridfins = launches.cores[0].gridfins ? (
-    <li>Gridfins: Yes</li>
-  ) : (
-    <li>Gridfins: No</li>
-  );
-  let landingAttempt = launches.cores[0].landing_attempt ? (
-    <li>Landing Attempt: Yes</li>
-  ) : (
-    <li>Landing Attempt: No</li>
-  );
-  let landingSuccess = launches.cores[0].landing_success ? (
-    <li>Landing Success: Yes</li>
-  ) : (
-    <li>Landing Success: No</li>
-  );
-  let reused = launches.cores[0].reused ? (
-    <li>Reused: Yes</li>
-  ) : (
-    <li>Reused: No</li>
-  );
-  // RETURNING BOOLEANS FROM THE API LAUNCHES.CORES IN OBJ
+  console.log(launches);
+  // console.log(launches.links.patch.small);
 
   // RENDERING THE COMPONENT
   if (error) {
@@ -57,18 +36,17 @@ export default function Launches() {
   } else {
     return (
       <div className='payload-container'>
-        {/* <img className='patch' src={launches.links.patch.large} alt='png' /> */}
         <h1>
           Name of Launch: <br />
           {launches.name}
         </h1>
-        <div className='image-container'>
-          <img
-            className='launch-image'
-            src={launches.links.patch.small}
-            alt='jpg'
-          />
-        </div>
+
+        <img
+          className='launch-image'
+          src={launches.links.patch.small}
+          alt='jpg'
+        />
+
         <div className='spacex-content'>
           <p>
             Local Date and Time of launch: <br />
@@ -82,17 +60,6 @@ export default function Launches() {
             Mission objective: <br />
             {launches.details}
           </p>
-          {/* THIS ERRORS OUT WHEN YOU LEAVE THE COMPONENT AND THEN RETURN TO IT */}
-          <ul>
-            {/* {console.log(launches.cores)} */}
-            Cores: <br />
-            <li>Flight No: {launches.cores[0].flight}</li>
-            <li>{gridfins}</li>
-            <li>{landingAttempt}</li>
-            <li>{landingSuccess}</li>
-            <li>Landing Type: {launches.cores[0].landing_type}</li>
-            <li>{reused}</li>
-          </ul>
         </div>
       </div>
     );
