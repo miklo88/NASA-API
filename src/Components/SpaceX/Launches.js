@@ -47,6 +47,7 @@ export default function Launches() {
     <li>Reused: No</li>
   );
   // RETURNING BOOLEANS FROM THE API LAUNCHES.CORES IN OBJ
+
   // RENDERING THE COMPONENT
   if (error) {
     return (
