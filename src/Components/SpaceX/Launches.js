@@ -25,7 +25,7 @@ export default function Launches() {
       );
   }, []);
   //   CHECKING OUT MY OBJECT
-  //   console.log(launches);
+  console.log(launches);
 
   // RENDERING THE COMPONENT
   if (error) {
@@ -49,7 +49,7 @@ export default function Launches() {
             src={spaceSuit}
             alt='jpg'
           />
-          {console.log(launches.links.flickr.original[0])}
+          {/* {console.log(launches.links.flickr.original[0])} */}
           <img
             className='launch-image'
             // src={launches.links.flickr.original}
@@ -70,6 +70,23 @@ export default function Launches() {
             Mission objective: <br />
             {launches.details}
           </p>
+          <ul>
+            {launches.cores.map((core) => {
+              return (
+                <li key={core.id}>
+                  <p>
+                    Cores: <br />
+                    Flight No: {core.flight} <br />
+                    Gridfins: {core.gridfins} <br />
+                    Landing Attempt: {core.landing_attempt} <br />
+                    Landing Success: {core.landing_success} <br />
+                    Landing Type: {core.landing_type} <br />
+                    Reused: {core.reused} <br />
+                  </p>
+                </li>
+              );
+            })}
+          </ul>
         </div>
         {/* <button src={launches.links.webcast}>Youtube link</button> */}
       </div>
