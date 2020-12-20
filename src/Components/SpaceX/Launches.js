@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Space-X.scss";
-import spaceSuit from "../Imgs/space_suit.jpg";
 
 export default function Launches() {
   // ERROR HANDLER => LOADING HANDLER => SPACE-X LAUNCHES
@@ -66,15 +65,7 @@ export default function Launches() {
         <div className='image-container'>
           <img
             className='launch-image'
-            // src={launches.links.flickr.original}
-            src={spaceSuit}
-            alt='jpg'
-          />
-          {/* {console.log(launches.links.flickr.original[0])} */}
-          <img
-            className='launch-image'
-            // src={launches.links.flickr.original}
-            src={spaceSuit}
+            src={launches.links.patch.small}
             alt='jpg'
           />
         </div>
