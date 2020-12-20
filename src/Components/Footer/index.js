@@ -9,7 +9,7 @@ export default function Footer() {
         </p>
         {/* miklo link */}
         <a className='link' href='https://miklo.netlify.app/'>
-          Visit MIKLO
+          MIKLO
         </a>
       </div>
     </div>
