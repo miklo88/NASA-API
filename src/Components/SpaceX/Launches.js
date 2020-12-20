@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import rocket from "../Imgs/SpaceX.jpg";
 import "./Space-X.scss";
 
 export default function Launches() {
@@ -41,11 +42,7 @@ export default function Launches() {
           {launches.name}
         </h1>
 
-        <img
-          className='launch-image'
-          src={launches.links.patch.small}
-          alt='jpg'
-        />
+        <img className='launch-image' src={rocket} alt='jpg' />
 
         <div className='spacex-content'>
           <p>
