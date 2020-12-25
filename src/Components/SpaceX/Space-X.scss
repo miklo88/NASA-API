@@ -11,10 +11,11 @@
     padding: 20px 0px;
   }
   .launch-image {
-    max-width: 400px;
-    width: 100%;
     height: auto;
-    padding: 10px 10px;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 200px;
+    padding: 0px 20px;
   }
   .spacex-content {
     display: flex;
